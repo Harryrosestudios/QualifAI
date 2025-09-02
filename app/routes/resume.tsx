@@ -31,6 +31,12 @@ const Resume = () => {
 
             const data = JSON.parse(resume);
 
+            // Debug logging to understand the data structure
+            console.log('Full data object:', data);
+            console.log('Feedback object:', data.feedback);
+            console.log('ATS object:', data.feedback?.ATS);
+            console.log('Type of feedback:', typeof data.feedback);
+
             const resumeBlob = await fs.read(data.resumePath);
             if(!resumeBlob) return;
 
@@ -79,10 +85,31 @@ const Resume = () => {
                     {feedback ? (
                         <div className="flex flex-col gap-8 animate-in fade-in duration-100">
                             <Summary feedback={feedback} />
-                            <ATS score={feedback.ATS.score || 0} suggestions={feedback.ATS.tips || []} />
+                            {feedback.ATS ? (
+                                <ATS
+                                    score={feedback.ATS.score || 0}
+                                    suggestions={feedback.ATS.tips || []}
+                                />
+                            ) : (
+                                <div className="bg-gradient-to-b from-red-100 to-white rounded-2xl shadow-md w-full p-6">
+                                    <div className="text-center py-4">
+                                        <img src="/icons/warning.svg" alt="Warning" className="w-12 h-12 mx-auto mb-4" />
+                                        <h3 className="text-xl font-semibold mb-2 text-red-600">ATS Data Incomplete</h3>
+                                        <p className="text-gray-600 mb-4">
+                                            The ATS analysis couldn't be completed. Please try uploading your resume again.
+                                        </p>
+                                        <button
+                                            onClick={() => navigate('/upload')}
+                                            className="primary-button"
+                                        >
+                                            Upload New Resume
+                                        </button>
+                                    </div>
+                                </div>
+                            )}
                             <Details feedback={feedback}/>
                         </div>
-                    ): (
+                    ) : (
                         <img src="/images/resume-scan-2.gif" className="w-full" alt="loading" />
                     )}
                 </section>
