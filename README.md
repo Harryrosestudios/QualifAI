@@ -16,7 +16,7 @@ QualifAI is an enterprise-ready, AI-powered applicant tracking system (ATS) that
 - **Zero Maintenance Costs** – End users cover their own costs via Puter’s unique infrastructure
 - **Deployable on Puter or Vercel** – Goes live in seconds!
 
-## Also Available at https://qualifai.harryrose.dev
+**Also Available at [QualifAI](https://qualifai.harryrose.dev)**
 
 ***
 
