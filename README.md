@@ -1,7 +1,3 @@
-Certainly! Here is a comprehensive **README.md** for your project, **QualifAI**, based on the full tutorial, written in British English and formatted in Markdown.
-
-***
-
 # QualifAI – AI-Powered Applicant Tracking System
 
 QualifAI is an enterprise-ready, AI-powered applicant tracking system (ATS) that allows you to upload, analyse, and manage CVs and job postings. Built with React, TypeScript, Tailwind CSS, and Puter.js, it leverages cutting-edge AI (including free GPT, Claude, and even Grok models) to deliver instant CV reviews, ATS scores, and custom feedback, all with a sleek, responsive user interface.
@@ -19,6 +15,10 @@ QualifAI is an enterprise-ready, AI-powered applicant tracking system (ATS) that
 - **Responsive UI** – Works beautifully on all devices
 - **Zero Maintenance Costs** – End users cover their own costs via Puter’s unique infrastructure
 - **Deployable on Puter or Vercel** – Goes live in seconds!
+
+## Also Available at https://qualifai.harryrose.dev
+
+***
 
 ## Demo
 
