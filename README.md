@@ -149,9 +149,7 @@ Contributions are welcome! Please fork the repo and raise a Pull Request.
 
 ## Acknowledgements
 
-- Original tutorial and code by [JavaScript Mastery](https://www.youtube.com/@javascriptmastery)
 - AI models via Puter Cloud (GPT, Claude, Grok)
-- Free assets and templates from the JS Mastery community
 
 ***
 
